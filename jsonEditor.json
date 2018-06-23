@@ -1,0 +1,162 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "maths",
+            "intents": [
+                {
+                    "name": "FactorialIntent",
+                    "slots": [
+                        {
+                            "name": "numberFact",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "what is factorial of {numberFact}",
+                        "factorial of {numberFact}"
+                    ]
+                },
+                {
+                    "name": "TableIntent",
+                    "slots": [
+                        {
+                            "name": "numberTable",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "tell me the table of {numberTable}"
+                    ]
+                },
+                {
+                    "name": "SquareIntent",
+                    "slots": [
+                        {
+                            "name": "numberSquare",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "what is the Square of {numberSquare}",
+                        "the Square of {numberSquare}",
+                        "tell me the Square  of {numberSquare}"
+                    ]
+                },
+                {
+                    "name": "AreaIntent",
+                    "slots": [
+                        {
+                            "name": "ShapeTwoD",
+                            "type": "ShapesTwoDimensional",
+                            "samples": [
+                                "{ShapeTwoD}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "tell the area of {ShapeTwoD}",
+                        "what is the area of {ShapeTwoD}"
+                    ]
+                },
+                {
+                    "name": "InputIntent",
+                    "slots": [
+                        {
+                            "name": "Input",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "{Input}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "{Input}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "ShapesTwoDimensional",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Triangle"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Rectangle"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Square"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Circle"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "AreaIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "ShapeTwoD",
+                            "type": "ShapesTwoDimensional",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.958085729361.219679500867"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "InputIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "Input",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1202430933189.285682911184"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.958085729361.219679500867",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Which shape you want me to calculate area for, you can say 'Circle' , Rectangle, Square or Triangle"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1202430933189.285682911184",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Can you tell the value again"
+                    }
+                ]
+            }
+        ]
+    }
+}

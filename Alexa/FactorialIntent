@@ -1,0 +1,8 @@
+FactorialIntent
+
+Sample Utterances:
+what is factorial of {numberFact}
+factorial of {numberFact}
+
+Intent Slots:
+numberFact - AMAZON.NUMBER

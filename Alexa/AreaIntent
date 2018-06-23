@@ -1,0 +1,8 @@
+AreaIntent
+
+Sample Utterances:
+tell the area of {ShapeTwoD}
+what is the area of {ShapeTwoD}
+
+Intent Slots:
+ShapeTwoD - ShapesTwoDimensional

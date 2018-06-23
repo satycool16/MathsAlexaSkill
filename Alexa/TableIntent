@@ -1,0 +1,7 @@
+TableIntent
+
+Sample Utterances:
+tell me the table of {numberTable}
+
+Intent Slots:
+numberTable - AMAZON.NUMBER

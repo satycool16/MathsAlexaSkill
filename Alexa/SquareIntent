@@ -1,0 +1,10 @@
+SquareIntent
+
+Sample Utterances:
+what is the Square of {numberSquare}
+the Square of {numberSquare}
+tell me the Square  of {numberSquare}
+
+
+Intent Slots:
+numberSquare - AMAZON.NUMBER
